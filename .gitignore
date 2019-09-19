@@ -3,6 +3,7 @@ Miscellaneous files
 #####
 scratch*.R
 *.pdf
+/temp
 
 #####
 System files
