@@ -19,7 +19,7 @@ library(ggplot2)
 
 # Read multiple data files (from raw OpenSesame output)
 raw_data <-
-  readbulk::read_opensesame(directory = "csv/", extension = ".csv")
+  readbulk::read_opensesame(directory = "01_pilot/data/", extension = ".csv")
 ```
 
 ## Preprocessing I:  The raw data
@@ -33,9 +33,9 @@ n_before <- nrow(raw_data)
 n_wrong_responses <- nrow(filter(raw_data, correct == 0))
 n_correct_responses <- nrow(filter(raw_data, correct == 1))
 n_slow_responses <-
-  nrow(filter(raw_data, initiation_time_tracking2_test > 500))
+  nrow(filter(raw_data, initiation_time_tracking2_test > 200))
 n_swift_responses <-
-  nrow(filter(raw_data, initiation_time_tracking2_test < 500))
+  nrow(filter(raw_data, initiation_time_tracking2_test < 200))
 ```
 
 ### By-subject wrong responses
@@ -45,8 +45,8 @@ n_swift_responses <-
     filter(correct == 0) %>%
     group_by(subject_nr) %>%
     summarise(
-      error_count = n(),
-      error_percentage = round((n() / n_before) * 100, digits = 2)
+      err_count = n(),
+      err_percent = round((n() / 150) * 100, digits = 2)
     )
 )
 ```
@@ -55,30 +55,25 @@ n_swift_responses <-
 ```{r}
 (
   stats_slow <- raw_data %>%
-    filter(initiation_time_tracking2_test > 500) %>%
+    filter(initiation_time_tracking2_test > 200) %>%
     group_by(subject_nr) %>%
     summarise(
       slow_count = n(),
-      slow_percentage = round((n() / n_before) * 100, digits = 2)
+      slow_percent = round((n() / 150) * 100, digits = 2)
     )
 )
 ```
 
 ### Exclude wrong and slow responses
-Tomlinson says: "We removed incorrect responses from all conditions."
 ```{r}
 # Exclude wrong responses
-raw_data <- raw_data %>% filter(correct != 0)
-```
+raw_data <- raw_data %>% filter(correct == 1)
 
-Tomlinson says: "[Some] responses had initiation times greater than 500 ms. These responses were also removed." 
-```{r}
 # Exclude slow responses
-raw_data <- raw_data %>% filter(initiation_time_tracking2_test < 500)
+raw_data <- raw_data %>% filter(initiation_time_tracking2_test < 200)
 ```
 
 ### Transforming the data into a mousetrap data object
-Note that there were 3 mousetrap-os items in the experiment, we now need to concatenate the output of two of them going forward (this will give us the complete trajectories).
 ```{r}
 mtdata <- mt_import_mousetrap(
   raw_data,
@@ -99,13 +94,8 @@ mtdata <- mt_import_mousetrap(
 
 ## Preprocessing II: The wonky check
 ```{r}
-# Right side up
-# This just flips all trajectories vertically.
 mtdata <- mt_remap_symmetric(mtdata)
-
-# Start-align
-# This aligns all trajectories so that each originates from the same point
-mtdata <- mt_align_start(mtdata)
+#mtdata <- mt_align_start(mtdata)
 ```
 
 ### Visually check for wonky trajectories
@@ -115,7 +105,9 @@ If you want to run it, you have to switch the **chunk option** 'eval' to 'TRUE'.
  mt_plot_per_trajectory(mtdata,
                         file="trajectories.pdf",
                         use="trajectories",
-                        verbose = TRUE)
+                        verbose = TRUE,
+                        points = FALSE,
+                        )
 ```
 Have a look at the PDF that was just created in your working directory and
 record the IDs of wonky-looking trajectories in the vector "wonkies" below.
@@ -125,7 +117,7 @@ Tip: On the Mac, make use of Preview's "Contact Sheet" mode with [Option+Command
 ```{r}
  wonkies <- c(
  #Enter the wonkies' trial IDs here
-   94,147,149,177,218,226,272
+   
 )
 
 #Record number of wonkies
