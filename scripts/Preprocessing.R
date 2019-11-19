@@ -13,7 +13,7 @@ library(ggplot2)
 
 # Read multiple data files (from raw OpenSesame output)
 raw_data <-
-  readbulk::read_opensesame(directory = "../01_pilot/data/", extension = ".csv")
+  readbulk::read_opensesame(directory = "raw_data/01_pilot/data/", extension = ".csv")
 
 # Preprocessing on the raw data -------------------------------------------
 
