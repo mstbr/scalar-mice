@@ -1,6 +1,9 @@
-#### Scalar mice: data preprocessing script
-#### Mathias Stoeber
-#### 2019/09/21
+####
+# project: "Replication Tomlinson et al. 2013"
+# title: Preprocessing of OpenSesame data"
+# author: "Mathias Stoeber & Timo Roettger"
+# date: "13/01/2020"
+###
 
 
 # Initialise --------------------------------------------------------------
@@ -90,4 +93,65 @@ mtdata <- mt_derivatives(mtdata, use = "tn_trajectories", save_as = "tn_trajecto
 res_check <- mt_check_resolution(mtdata, desired = 10)
 print(res_check$summary)
 print(res_check$relative_frequencies_desired)
+
+
+# Cluser -----------------------------------------------
+
+# estimtate clusters with hclust (takes 30 seconds on my machine)
+k_hclust <- mt_cluster_k(
+  mtdata,
+  use = "tn_trajectories",
+  # range of k to consider
+  kseq = 2:15,
+  # which of the 4 measures to compute
+  compute = c("stability", "gap", "jump", "slope"),
+  # use hierarchical clustering ("hclust") or k-means clustering ("kmeans")
+  method = "hclust"
+)
+
+# output results of clustering
+bind_rows(unlist(k_hclust$kopt)) %>%
+  mutate(method = "hclust") %>%
+  select(method, everything())
+
+# gap and jump are useless (again)
+# stab (2) and slope (4) yield different results
+
+# we proceed with 2 and 4 clusters
+
+# clusters "space normalized"
+mtdata <- mt_cluster(mtdata,
+                     use = "tn_trajectories",
+                     n_cluster = 2, method = "hclust", save_as = "clustering2")
+mtdata <- mt_cluster(mtdata,
+                     use = "tn_trajectories",
+                     n_cluster = 4, method = "hclust", save_as = "clustering4")
+
+mtdata$clustering2$cluster2 <- mtdata$clustering2$cluster
+mtdata$clustering4$cluster4 <- mtdata$clustering4$cluster
+
+# add everything into one data frame
+df <- mtdata$data %>%
+  full_join(mtdata$measures, by = "mt_id") %>%
+  full_join(mtdata$clustering2, by = "mt_id") %>%
+  full_join(mtdata$clustering4, by = "mt_id")
+
+# convert array tn_trajectories to data_frame
+df_tn <- as.data.frame.table(mtdata$tn_trajectories) %>%
+  spread(key = Var3, value = Freq) %>%
+  select(-Var2) %>%
+  rename("mt_id" = Var1)
+
+# df_sp <- as.data.frame.table(mtdata$sp_trajectories) %>%
+#   spread(key = Var3, value = Freq) %>%
+#   select(-Var2) %>%
+#   rename("xpos_sp" = xpos,
+#          "ypos_sp" = ypos) %>%
+#   rename("mt_id" = Var1)
+
+df_all <- full_join(df, df_tn, by = "mt_id")
+
+# write into derived_data
+
+write_csv(df_all, "derived_data/derivedDF.csv")
 
