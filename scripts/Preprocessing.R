@@ -8,12 +8,11 @@
 # Load packages
 library(readbulk)
 library(mousetrap)
-library(dplyr)
-library(ggplot2)
+library(tidyverse)
 
 # Read multiple data files (from raw OpenSesame output)
 raw_data <-
-  readbulk::read_opensesame(directory = "raw_data/03_pilot/data/", extension = ".csv")
+  readbulk::read_opensesame(directory = "raw_data/Pilots 1-3/pilot_03/", extension = ".csv")
 
 # Preprocessing on the raw data -------------------------------------------
 
@@ -80,7 +79,7 @@ mtdata <- mt_import_mousetrap(
   )
 
 mtdata <- mt_remap_symmetric(mtdata)
-#mtdata <- mt_align_start(mtdata)
+mtdata <- mt_align_start(mtdata)
 mtdata <- mt_derivatives(mtdata)
 mtdata <- mt_measures(mtdata)
 mtdata <- mt_time_normalize(mtdata)
