@@ -78,3 +78,12 @@ vignettes/*.pdf
 # Temporary files created by R markdown
 *.utf8.md
 *.knit.md
+.Rproj.user
+
+
+#####
+Data
+#####
+
+# derived data that is too large
+derived_data/
