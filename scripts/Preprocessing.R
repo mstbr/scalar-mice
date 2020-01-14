@@ -117,7 +117,7 @@ bind_rows(unlist(k_hclust$kopt)) %>%
 # gap and jump are useless (again)
 # stab (2) and slope (4) yield different results
 
-# we proceed with 2 and 4 clusters
+# we proceed with 2 to 4 clusters
 
 # clusters "space normalized"
 mtdata <- mt_cluster(mtdata,
@@ -125,15 +125,20 @@ mtdata <- mt_cluster(mtdata,
                      n_cluster = 2, method = "hclust", save_as = "clustering2")
 mtdata <- mt_cluster(mtdata,
                      use = "tn_trajectories",
+                     n_cluster = 3, method = "hclust", save_as = "clustering3")
+mtdata <- mt_cluster(mtdata,
+                     use = "tn_trajectories",
                      n_cluster = 4, method = "hclust", save_as = "clustering4")
 
 mtdata$clustering2$cluster2 <- mtdata$clustering2$cluster
+mtdata$clustering2$cluster3 <- mtdata$clustering3$cluster
 mtdata$clustering4$cluster4 <- mtdata$clustering4$cluster
 
 # add everything into one data frame
 df <- mtdata$data %>%
   full_join(mtdata$measures, by = "mt_id") %>%
   full_join(mtdata$clustering2, by = "mt_id") %>%
+  full_join(mtdata$clustering3, by = "mt_id") %>%
   full_join(mtdata$clustering4, by = "mt_id")
 
 # convert array tn_trajectories to data_frame

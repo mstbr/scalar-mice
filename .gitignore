@@ -82,8 +82,11 @@ vignettes/*.pdf
 
 
 #####
-Data
+Data and models
 #####
 
-# derived data that is too large
-derived_data/
+# derived data that are too large
+derived_data/derivedDF.csv
+
+# derived models that are too large
+models/

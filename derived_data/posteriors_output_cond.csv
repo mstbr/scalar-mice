@@ -1,0 +1,4 @@
+"","AUC","lci","uci","Condition","probability of beta > 0"
+"1",-1.04,-1.57,-0.51,"delta",0
+"2",-0.52,-0.79,-0.26,"Logical",0
+"3",0.52,0.26,0.79,"Pragmatic",1
