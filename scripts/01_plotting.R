@@ -266,33 +266,33 @@ agg_plot_cluster4 <-
 
 
 # store plots
-ggsave(filename = "plots/agg_plot.pdf",
+ggsave(filename = "plots/agg_plot.png",
        plot = agg_plot,
-       device = "pdf",
+       device = "png",
        width = 240,
        height = 170,
        units = "mm",
        dpi = 300)
 
-ggsave(filename = "plots/agg_plot_cluster2.pdf",
+ggsave(filename = "plots/agg_plot_cluster2.png",
        plot = agg_plot_cluster2,
-       device = "pdf",
+       device = "png",
        width = 240,
        height = 170,
        units = "mm",
        dpi = 300)
 
-ggsave(filename = "plots/agg_plot_cluster3.pdf",
+ggsave(filename = "plots/agg_plot_cluster3.png",
        plot = agg_plot_cluster3,
-       device = "pdf",
+       device = "png",
        width = 295,
        height = 170,
        units = "mm",
        dpi = 300)
 
-ggsave(filename = "plots/agg_plot_cluster4.pdf",
+ggsave(filename = "plots/agg_plot_cluster4.png",
        plot = agg_plot_cluster4,
-       device = "pdf",
+       device = "png",
        width = 350,
        height = 170,
        units = "mm",

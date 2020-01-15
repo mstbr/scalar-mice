@@ -123,7 +123,7 @@ priors_xmdl <- c(
 # model AUC x clusters
 xmdl_AUC_cluster <- brm(AUC_c ~ 1 + Condition_c * cluster4
                 + (1 | subject_nr)
-                + (1 | stimulus),
+                + (1 + Condition_c | stimulus),
                 family = "gaussian",
                 data = df_red, save_all_pars = TRUE,
                 chains = 4, cores = 4,
@@ -310,18 +310,6 @@ posteriors_AUC_clusters <- posterior_samples(xmdl_AUC_cluster) %>%
   )
 
 
-##########
-
-# BF attempt
-library(bayestestR)
-library(logspline)
-posteriors_AUC_clusters
-
-bayesfactor_parameters(posteriors_AUC$delta,
-                       prior = distribution_normal(length(posteriors_AUC$delta), 0, .1),
-                       direction = "two-sided", null = 0, verbose = TRUE)
-
-##########
 
 parameters = c("delta_cluster1", "delta_cluster2", "delta_cluster3", "delta_cluster4")
 
@@ -362,7 +350,7 @@ ggplot(posteriors_output_condclusters, aes(x = cluster, y = AUC)) +
   labs(title = "(b) Model including interaction with clusters",
        subtitle = " \n",
        x = "\ntrajectory cluster",
-       y = ""
+       y = "scaled AUC differences\n"
   ) +
   theme_classic() +
   theme(legend.position = "none",
@@ -392,10 +380,10 @@ uber_estimates <-
             common.legend = F)
 
 # store plots
-ggsave(filename = "plots/uber_estimates.pdf",
+ggsave(filename = "plots/uber_estimates.png",
        plot = uber_estimates,
-       device = "pdf",
-       width = 235,
+       device = "png",
+       width = 255,
        height = 150,
        units = "mm",
        dpi = 300)
