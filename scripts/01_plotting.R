@@ -26,10 +26,14 @@ df_red <- df %>%
   filter(sentence_type == "Some critical")
 
 df_red$cluster2 <- as.factor(as.character(df_red$cluster2))
+df_red$cluster3 <- as.factor(as.character(df_red$cluster3))
 df_red$cluster4 <- as.factor(as.character(df_red$cluster4))
 
 levels(df_red$cluster2) <- c("cluster1", "cluster2")
 df_red$cluster2 <- factor(df_red$cluster2, levels = c("cluster1", "cluster2"))
+
+levels(df_red$cluster2) <- c("cluster1", "cluster2", "cluster3")
+df_red$cluster2 <- factor(df_red$cluster2, levels = c("cluster1", "cluster2", "cluster3"))
 
 levels(df_red$cluster4) <- c("cluster1", "cluster2", "cluster3", "cluster4")
 df_red$cluster4 <- factor(df_red$cluster4, levels = c("cluster1", "cluster2", "cluster3", "cluster4"))

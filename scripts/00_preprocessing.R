@@ -157,9 +157,15 @@ df_tn <- as.data.frame.table(mtdata$tn_trajectories) %>%
 #          "ypos_sp" = ypos) %>%
 #   rename("mt_id" = Var1)
 
-df_all <- full_join(df, df_tn, by = "mt_id")
+df_all_untrimmed <- full_join(df, df_tn, by = "mt_id")
+
+# restrict to relevant columns
+df_all <- df_all_untrimmed %>%
+  select(sentence_type, Condition, subject_nr, stimulus,
+         cluster2, cluster3, cluster4, mt_id,
+         timestamps, steps, AUC, xpos, ypos
+         )
 
 # write into derived_data
-
 write_csv(df_all, "derived_data/derivedDF.csv")
 

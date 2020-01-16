@@ -32,6 +32,7 @@ library(ggpubr)
 df <- read_csv("derived_data/derivedDF.csv")
 
 df$cluster2 <- as.factor(as.character(df$cluster2))
+df$cluster3 <- as.factor(as.character(df$cluster3))
 df$cluster4 <- as.factor(as.character(df$cluster4))
 
 # reduce to what we need (only critical)
