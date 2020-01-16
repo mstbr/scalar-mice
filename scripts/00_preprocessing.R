@@ -23,6 +23,9 @@ raw_data <-
 raw_data <- raw_data %>%
   filter(!is.na(count_trials_test))
 
+# make initiation
+raw_data$initiation_time_tracking2_test <- as.numeric(raw_data$initiation_time_tracking2_test)
+
 # Insert column into raw_data indicating group membership
 raw_data$Condition[
   raw_data$experiment_file == "false_trueleft.osexp" |
