@@ -92,7 +92,9 @@ priors_xmdl <- c(
 )
 
 # check how clusters are distributed across subjects
-xtabs(~cluster + subject_nr, df_red)
+xtabs(~cluster2 + subject_nr, df_red)
+xtabs(~cluster3 + subject_nr, df_red)
+xtabs(~cluster4 + subject_nr, df_red)
 # many empty cells, so no slopes
 
 # model clusters
@@ -146,7 +148,6 @@ save(xmdl_AUC_cluster, file = "models/AUC_clusters_models.RData")
 ## Extract posteriors and plot ###
 ##################################
 
-#load(file = "SGK_ReAnalysis/models/AUC_clusters_models.RData")
 load(file = "models/AUC_models.RData")
 load(file = "models/AUC_clusters_models.RData")
 load(file = "models/clusters_models.RData")

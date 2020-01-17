@@ -65,9 +65,9 @@ pp_check(xmdl_AUC)
 
 Looking at the posterior predictive check, there is a bump on the right that throws of the estimation quite a bit. What could that bump be??? It's of course categorically different movement trajectory types. (Mathias: we want the light blue lines to be similar to the dark blue line. If there is a strong divergence, the model doesn't accurately model the data)
 
-Okay, I estimated the optimal number of trajectory types using four commonly used k-selection methods. Cluster stability (stability), and the slope statistic (slope) are the only useful ones for our purposes. The former estimates 2 clusters, the latter estimates 4. So let's check the data with clusters 2, 3 and 4:
+Okay, I estimated the optimal number of trajectory types using four commonly used k-selection methods. Cluster stability (stability), and the slope statistic (slope) are the only useful ones for our purposes. The former estimates 2 clusters, the latter estimates 3. So let's check the data with clusters 2 and 3:
 
-(Question: How do we preregister this step for later?)
+(Question: How do we preregister this step for later? One way would be exploring diverging possibilities (so both 2 and 3))
 
 ```{r cluster2, echo=FALSE, out.width = "100%"}
 
@@ -84,16 +84,7 @@ knitr::include_graphics("../plots/agg_plot_cluster3.png")
 
 ```
 
-Certainly better and as you can see, cluser 1 remains the same. The former cluster 2 is now split into two clusters, teasing apart dCoMs (2) and straight lines (3). What remains unclear to me is the difference between 1 and 3. Let's try 4 clusters.
-
-
-```{r cluster4, echo=FALSE, out.width = "100%"}
-
-knitr::include_graphics("../plots/agg_plot_cluster4.png")
-
-```
-
-Okay that basically teases apart the former cluster 1 into 1 and 4 (2 and 3 remain untouched). Thats overall a good thing, because cluster 4 are these two participants that started to move their mouse upwards earlier, resulting in shorter trajectories.
+Certainly better and as you can see, cluser 1 remains the same. The former cluster 2 is now split into two clusters, teasing apart dCoMs (2) and (more or less) straight lines (3). What remains unclear to me is the difference between 1 and 3. 
 
 I think none of these cluster proposals are perfect, but they are doing something objective (avoiding subjective decisions), and they at least parcel out these dCoMs in cluster 2. Good. 
 
@@ -115,7 +106,7 @@ Another thing that becomes very clear is that these dCoMs (cluster 2) are much m
 # # many empty cells, so no slopes
 # 
 # # model clusters
-# xmdl_clusters <- brm(cluster4 ~ 1 + Condition_c
+# xmdl_clusters <- brm(cluster3 ~ 1 + Condition_c
 #                      + (1  | subject_nr)
 #                      + (1 | stimulus),
 #                 family = "categorical",
