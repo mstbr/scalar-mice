@@ -113,6 +113,7 @@ mtdata <- mt_align_start(mtdata)
 mtdata <- mt_derivatives(mtdata)
 mtdata <- mt_measures(mtdata)
 mtdata <- mt_time_normalize(mtdata)
+mtdata <- mt_spatialize(mtdata)
 mtdata <- mt_derivatives(mtdata, use = "tn_trajectories", save_as = "tn_trajectories")
 
 # Sampling resolution check -----------------------------------------------
@@ -121,6 +122,15 @@ res_check <- mt_check_resolution(mtdata, desired = 10)
 print(res_check$summary)
 print(res_check$relative_frequencies_desired)
 
+
+# Custom prototype matching -----------------------------------------------
+
+prototypes <- read_csv("prototypes.csv")
+prototypes <- mt_import_long(prototypes)
+prototypes <- prototypes$trajectories
+# mt_plot(prototypes, color = "mt_id")
+mtdata <- mt_map(mtdata, use = "sp_trajectories", save_as = "prototyping", prototypes = prototypes)
+# mtdata$prototyping
 
 # Cluster -----------------------------------------------
 
@@ -148,13 +158,13 @@ bind_rows(unlist(k_hclust$kopt)) %>%
 
 # clusters "space normalized"
 mtdata <- mt_cluster(mtdata,
-                     use = "tn_trajectories",
+                     use = "sp_trajectories",
                      n_cluster = 2, method = "hclust", save_as = "clustering2")
 mtdata <- mt_cluster(mtdata,
-                     use = "tn_trajectories",
+                     use = "sp_trajectories",
                      n_cluster = 3, method = "hclust", save_as = "clustering3")
 mtdata <- mt_cluster(mtdata,
-                     use = "tn_trajectories",
+                     use = "sp_trajectories",
                      n_cluster = 4, method = "hclust", save_as = "clustering4")
 
 mtdata$clustering2$cluster2 <- mtdata$clustering2$cluster

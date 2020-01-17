@@ -1,0 +1,6 @@
+mt_id,mt_seq,timestamps,xpos,ypos
+straight,1,0,-0,-0
+straight,2,10,-1,1
+DCOM,1,0,0,-0
+DCOM,2,10,1,1
+DCOM,3,20,-1,1
