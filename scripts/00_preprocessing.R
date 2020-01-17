@@ -23,7 +23,7 @@ raw_data <-
 raw_data <- raw_data %>%
   filter(!is.na(count_trials_test))
 
-# make initiation
+# convert the relevant `initiation_time`` column to type `numeric`
 raw_data$initiation_time_tracking2_test <- as.numeric(raw_data$initiation_time_tracking2_test)
 
 # Insert column into raw_data indicating group membership
@@ -68,8 +68,7 @@ raw_data <- raw_data %>% filter(correct == 1)
 
 # Exclude slow responses
 raw_data <-
-  raw_data %>% filter(initiation_time_tracking2_test <= 200 &
-                        initiation_time_tracking2_test != "None")
+  raw_data %>% filter(initiation_time_tracking2_test <= 200)
 
 
 # Preprocessing on the mousetrap ------------------------------------------
