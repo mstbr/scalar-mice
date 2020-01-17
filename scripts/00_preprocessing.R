@@ -71,7 +71,8 @@ raw_data <-
   raw_data %>% filter(initiation_time_tracking2_test <= 200)
 
 
-# Preprocessing on the mousetrap ------------------------------------------
+
+# Create mousetrap object -------------------------------------------------
 
 mtdata <- mt_import_mousetrap(
   raw_data,
@@ -82,6 +83,30 @@ mtdata <- mt_import_mousetrap(
   timestamps_label = c("timestamps_tracking1_test",
                        "timestamps_tracking2_test")
   )
+
+
+# Removal of 'early movers' -----------------------------------------------
+
+# If the first sample of a trajectory has already left the start button (plus some additional area), exclude the trial.
+
+# The start button: 64*64
+# x: -32 to 32
+# ytop: 640
+#
+# The exclusion box: 96*96
+# x: -48 to 48
+# ytop: 624
+
+# Export & exclude early movers
+temp <- mt_export_long(mtdata, use2_variables = colnames(mtdata$data)) %>%
+  group_by(mt_id) %>%
+  filter(!any(mt_seq == 1 && (ypos < 624 | xpos < -48 | xpos > 48)))
+
+# Re-import into a mousetrap object
+mtdata <- mt_import_long(temp)
+
+
+# Preprocessing on the mousetrap ------------------------------------------
 
 mtdata <- mt_remap_symmetric(mtdata)
 mtdata <- mt_align_start(mtdata)
@@ -97,7 +122,7 @@ print(res_check$summary)
 print(res_check$relative_frequencies_desired)
 
 
-# Cluser -----------------------------------------------
+# Cluster -----------------------------------------------
 
 # estimtate clusters with hclust (takes 30 seconds on my machine)
 k_hclust <- mt_cluster_k(
