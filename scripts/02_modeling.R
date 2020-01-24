@@ -33,7 +33,7 @@ df <- read_csv("derived_data/derivedDF.csv")
 
 df$cluster2 <- as.factor(as.character(df$cluster2))
 df$cluster3 <- as.factor(as.character(df$cluster3))
-df$cluster4 <- as.factor(as.character(df$cluster4))
+df$prototype <- as.factor(as.character(df$prototype))
 
 # reduce to what we need (only critical)
 df_red <- df %>%
@@ -94,14 +94,13 @@ priors_xmdl <- c(
 # check how clusters are distributed across subjects
 xtabs(~cluster2 + subject_nr, df_red)
 xtabs(~cluster3 + subject_nr, df_red)
-xtabs(~cluster4 + subject_nr, df_red)
 # many empty cells, so no slopes
 
 # model clusters
-xmdl_clusters <- brm(cluster4 ~ 1 + Condition_c
+xmdl_clusters <- brm(cluster2 ~ 1 + Condition_c
                      + (1  | subject_nr)
                      + (1 | stimulus),
-                family = "categorical",
+                family = "bernoulli",
                 data = df_red, save_all_pars = TRUE,
                 chains = 4, cores = 4,
                 iter = 4000, warmup = 2000,
@@ -124,7 +123,7 @@ priors_xmdl <- c(
 
 
 # model AUC x clusters
-xmdl_AUC_cluster <- brm(AUC_c ~ 1 + Condition_c * cluster4
+xmdl_AUC_cluster <- brm(AUC_c ~ 1 + Condition_c * cluster3
                 + (1 | subject_nr)
                 + (1 + Condition_c | stimulus),
                 family = "gaussian",

@@ -10,6 +10,49 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## Technical & design details
+## Participants
+We will test 32 native speakers of German. All participants will be students at the University of Osnabrueck and will receive course credit for participation.
+
+## Sample size justification
+Based on a pilot data set of 12 subjects, we estimated the effect magnitude and relevant variance components. To be  conservative, we simulated fake data assuming the following values. The simulation was based on 50% of the effect magnitude observed in the pilot and on 200% of the estimated variance components (random intercept for both subject and sentence and resiudal variance). Even with these highly conservative values, a power analysis suggests that we achieve a power of 0.9 with 24 participants. Because we aim at further exploring other aspects of the data, we aim for 32 participants as our target sample size.
+
+## Procedure
 Task: Mathias
+Notes: what was the concrete procedure in the lab (intro, test, debriefing);
+what was the concrete trial-by-trial sequence including temporal intervals like inter and intra stimulus intervals
+
+## Materials
+Task: Mathias
+Notes: Generation of test sentences 
+
+## Design
+Task: Mathias
+Notes: What Conditions did we have and how were they distributed in the experiment. Randomized? pseudorandomized?
+
+## Processing
+Task: Mathias
+Notes: Processing of the raw OpenSesame files
+
+## Data analysis
+
+### Exclusion
+The whole data set of a participant will be excluded whenever they (a) exhibit more than 10% errors. Trials with incorrect responses will be discarded on a trial-by-trial basis. Additionally, trials that exhibited undesired early initiation patterns violating the instruction will be discarded. We operationalize such undesired early initiations by excluding trials in which the first sample of the trajectory was recorded outside of the starting area. The starting area was defined as 200% of the start button located at the start button. 
+
+Mathias: Find non-dumbo phrasing for last sentence.
+
+### Model
+We calculated the area-under-the-curve (AUC) for each trajectory in the critical-some condition using the mousetrap package (Kieslich & Henninger 2017) in R (R Core Team 2019). AUC is the geometric area between the actual trajectory and the direct path where areas below the direct path have been subtracted. Scaled AUC values are submitted to a Bayesian multi-level regression model, predicting AUCs based on training (logical vs. pragmatic). We added random intercepts for both participants and sentence. We used weakly informative Student-t priors centered at 0 with SD = 1 (df = 3) for all population-level regression coefficients (e.g., Gelman, 2006), truncated Student-t priors centered at 0 (df = 3) with SD = 1 for all standard deviations, and LKJ(2) priors for all correlation parameters. Four sampling chains with 4000 iterations each were run for each model, with a warm-up period of 2000 iterations. 
+
+### Inferential criterion
+We identify a region of values around 0 that we consider practically equivalent to a null effect. In the absence of guiding principles as to what constitutes a theoretically meaningful effect magnitude of mouse movement curvature, we define the relative effect magnitude here in terms of 0.1 of the scaled AUC measure (i.e. the ROPE spans 0.05 to -0.05). 
+
+To assess evidence for the null hypothesis H0 (the difference in AUC between logical and pragmatic training is smaller than 0.05 standard deviations) over the alternative hypothesis Ha (the difference in AUC between logical and pragmatic training is larger than 0.05 standard deviations), we calculate the Bayes factor by dividing the posterior-odds of being within the ROPE (-0.05 - 0.05) by the prior-odds of being within the ROPE. Additionally, we report the means and 95% credible intervals surrounding to means of the posterior distributions to quantify the model estimates and our uncertainty regarding these estimates. 
+
+
+
+
+
+
+
+
 
