@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 We will test 32 native speakers of German. All participants will be students at the University of Osnabrueck and will receive course credit for participation.
 
 ## Sample size justification
-Based on a pilot data set of 12 subjects, we estimated the effect magnitude and relevant variance components. To be  conservative, we simulated fake data assuming the following values. The simulation was based on 50% of the effect magnitude observed in the pilot and on 200% of the estimated variance components (random intercept for both subject and sentence and resiudal variance). Even with these highly conservative values, a power analysis suggests that we achieve a power of 0.9 with 24 participants. Because we aim at further exploring other aspects of the data, we aim for 32 participants as our target sample size.
+Based on a pilot data set of 12 subjects, we estimated the effect magnitude and relevant variance components. To be  conservative, we simulated fake data assuming the following values. The simulation was based on 50% of the effect magnitude observed in the pilot and on 200% of the estimated variance components (random intercept for both subject and sentence and resiudal variance) (see /). Even with these highly conservative values, a power analysis suggests that we achieve a power of 0.9 with 24 participants. Because we aim at further exploring other aspects of the data, we aim for 32 participants as our target sample size.
 
 ## Procedure
 Task: Mathias
