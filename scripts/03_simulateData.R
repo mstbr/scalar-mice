@@ -62,7 +62,8 @@ item <- tibble(
 # put them together
 trials <- crossing(
   sub_id = sub$sub_id, # get subject IDs from the sub data table
-  item_id = item$item_id, # get stimulus IDs from the stim data table
+  item_id = item$item_id,
+# get stimulus IDs from the stim data table
 ) %>%
   left_join(sub, by = "sub_id") %>% # includes the intercept and conditin for each subject
   left_join(item, by = "item_id")   # includes the intercept for each stimulus
