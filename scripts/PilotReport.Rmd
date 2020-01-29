@@ -67,7 +67,6 @@ Looking at the posterior predictive check, there is a bump on the right that thr
 
 Okay, I estimated the optimal number of trajectory types using four commonly used k-selection methods. Cluster stability (stability), and the slope statistic (slope) are the only useful ones for our purposes. The former estimates 2 clusters, the latter estimates 3. So let's check the data with clusters 2 and 3:
 
-(Question: How do we preregister this step for later? One way would be exploring diverging possibilities (so both 2 and 3))
 
 ```{r cluster2, echo=FALSE, out.width = "100%"}
 
@@ -75,7 +74,7 @@ knitr::include_graphics("../plots/agg_plot_cluster2.png")
 
 ```
 
-Okay so one trajectory type is kinda going straight to the target the other, on average, first moves to the competitor. But if you look at the actual trajectories (semi-transparent in the background), both clusters have a lot of stuff in there. Doesn't strike me as a good categorization. Let's look at three clusters:
+Okay so one trajectory type is kinda going straight to the target the other, on average, first moves to the competitor. That's pretty solid already. Let's check out three clusters.
 
 
 ```{r cluster3, echo=FALSE, out.width = "100%"}
@@ -84,9 +83,57 @@ knitr::include_graphics("../plots/agg_plot_cluster3.png")
 
 ```
 
-Certainly better and as you can see, cluser 1 remains the same. The former cluster 2 is now split into two clusters, teasing apart dCoMs (2) and (more or less) straight lines (3). What remains unclear to me is the difference between 1 and 3. 
+I don't think that buys us anything. Cluster 1 is split into cluster 1 and 2 now with a few striaght-line ish trajectories.
 
-I think none of these cluster proposals are perfect, but they are doing something objective (avoiding subjective decisions), and they at least parcel out these dCoMs in cluster 2. Good. 
+What about just simply defining prototypes for the most extreme possible reactions: a *straight* line directly to the target and a *dCoM*, i.e straight line to the competitor and then correction to the target.
+
+```{r prototypes, echo=FALSE, message=FALSE, warning=FALSE, out.width = "100%"}
+
+prototypes <- data.frame(xpos = c(0,0,1200,0,-1200,1200), 
+                         ypos = c(0,0,1300,0,1300,1300),
+                         Condition = c("straight", "straight", "straight",
+                                       "dCoM", "dCoM", "dCoM"))
+prototypes
+
+ggplot(prototypes) +
+  #geom_path(data = df_red, aes(-xpos, ypos, color = Condition, group = mt_id), size = 0.5, alpha = 0.05) +
+  geom_path(data = prototypes, aes(xpos, ypos, group = Condition), size = 3, color = "black") +
+  geom_rect(xmin = -1.4, xmax = -0.8, ymin = 1.25, ymax = 1.85,
+            color = "grey", fill = NA, alpha = 0.5, lty = "dashed") +
+  geom_rect(xmin = 1.4, xmax = 0.8, ymin = 1.25, ymax = 1.85,
+            color = "grey", fill = NA, alpha = 0.5) +
+ # geom_point(aes(-xpos, ypos, color = Condition), size = 2, alpha = 0.8) +
+  scale_y_continuous(expand = c(0, 0), limits = c(-200, 1650)) +
+  scale_x_continuous(expand = c(0, 0), limits = c(-1850, 1850)) +
+  labs(title = "(b) prototypes",
+       subtitle = "\n",
+       x = "\nhorizontal position",
+       y = "vertical position\n"
+  ) +
+  facet_grid(~ Condition) +
+  theme_classic() +
+  theme(legend.position = "bottom",
+        legend.key.height = unit(2,"line"),
+        legend.text = element_text(size = 16),
+        legend.title = element_text(size = 16, face = "bold"),
+        legend.background = element_rect(fill = "transparent"),
+        strip.text = element_text(size = 16),
+        strip.background = element_blank(),
+        axis.line = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        axis.title = element_text(size = 16, face = "bold", color = "grey"),
+        plot.title = element_text(size = 16, face = "bold"),
+        panel.border = element_rect(colour = "black", fill = NA, size = 1),
+        plot.margin = unit(c(1,1,1,1),"cm"))
+
+```
+
+```{r prototype, echo=FALSE, out.width = "100%"}
+
+knitr::include_graphics("../plots/agg_plot_prototype.png")
+
+```
 
 Another thing that becomes very clear is that these dCoMs (cluster 2) are much more frequent for the pragmatic listeners, ultimately creating an asymmetry in AUC. Running a multinomial model predicting cluster by condition (using the four cluster solution) starts to capture these differences, but more juice is obviously needed. Here the numbers.
 

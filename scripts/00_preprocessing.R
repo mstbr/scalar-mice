@@ -152,9 +152,9 @@ bind_rows(unlist(k_hclust$kopt)) %>%
   select(method, everything())
 
 # gap and jump are useless (again)
-# stab (2) and slope (4) yield different results
+# stab (2) and slope (3) yield different results
 
-# we proceed with 2 to 4 clusters
+# we proceed with 2 to 3 clusters
 
 # clusters "space normalized"
 mtdata <- mt_cluster(mtdata,
@@ -176,7 +176,7 @@ df <- mtdata$data %>%
   full_join(mtdata$measures, by = "mt_id") %>%
   full_join(mtdata$clustering2, by = "mt_id") %>%
   full_join(mtdata$clustering3, by = "mt_id") %>%
-  full_join(mtdata$clustering4, by = "mt_id")
+  full_join(mtdata$prototyping, by = "mt_id")
 
 # convert array tn_trajectories to data_frame
 df_tn <- as.data.frame.table(mtdata$tn_trajectories) %>%
@@ -184,20 +184,21 @@ df_tn <- as.data.frame.table(mtdata$tn_trajectories) %>%
   select(-Var2) %>%
   rename("mt_id" = Var1)
 
-# df_sp <- as.data.frame.table(mtdata$sp_trajectories) %>%
-#   spread(key = Var3, value = Freq) %>%
-#   select(-Var2) %>%
-#   rename("xpos_sp" = xpos,
-#          "ypos_sp" = ypos) %>%
-#   rename("mt_id" = Var1)
+df_sp <- as.data.frame.table(mtdata$sp_trajectories) %>%
+  spread(key = Var3, value = Freq) %>%
+  select(-Var2) %>%
+  rename("xpos_sp" = xpos,
+         "ypos_sp" = ypos) %>%
+  rename("mt_id" = Var1)
 
-df_all_untrimmed <- full_join(df, df_tn, by = "mt_id")
+df_all_untrimmed <- full_join(df, df_tn, by = "mt_id") %>%
+  full_join(df_sp)
 
 # restrict to relevant columns
 df_all <- df_all_untrimmed %>%
   select(sentence_type, Condition, subject_nr, stimulus,
-         cluster2, cluster3, cluster4, mt_id,
-         timestamps, steps, AUC, xpos, ypos
+         cluster2, cluster3, cluster4, mt_id, prototype,
+         timestamps, steps, AUC, xpos, ypos, xpos_sp, ypos_sp
          )
 
 # write into derived_data
