@@ -1,0 +1,101 @@
+Pattern,Exemplar,Category,Non-category,Sub-category,stimulus,correct.response,type
+Alle Exemplar sind Category,Laubbäume,Pflanzen,Kühe,Ulmen,Alle Laubbäume sind Pflanzen.,w,All true
+Alle Exemplar sind Non-category,Pferde,Lebewesen,Zitronen,Fohlen,Alle Pferde sind Zitronen.,f,All false
+Einige Category sind Exemplar,Papageien,Vögel,Nagetiere,bunt,Einige Vögel sind Papageien.,w,Some true
+Einige Exemplar sind Non-category,Schweine,Lebewesen,Schrauben,Ferkel,Einige Schweine sind Schrauben.,f,Some false
+Einige Exemplar sind Sub-category,Tische,Möbel,Hüte,aus Metall,Einige Tische sind aus Metall.,w,Some subordinate true
+Alle Exemplar sind Non-category,Tomaten,Lebensmittel,Möbel,genmanipuliert,Alle Tomaten sind Möbel.,f,All false
+Einige Exemplar sind Non-category,Sträucher,Pflanzen,Leute,europäisch,Einige Sträucher sind Leute.,f,Some false
+Einige Exemplar sind Category,Bären,Säugetiere,Trompeten,Pandas,Einige Bären sind Säugetiere.,w,Some critical
+Einige Exemplar sind Sub-category,Mützen,Kopfbedeckungen,Säugetiere,gehäkelt,Einige Mützen sind gehäkelt.,w,Some subordinate true
+Alle Exemplar sind Category,Tees,Getränke,Insekten,koffeinhaltig,Alle Tees sind Getränke.,w,All true
+Einige Exemplar sind Non-category,Gläser,Geschirr,Schlangen,durchsichtig,Einige Gläser sind Schlangen.,f,Some false
+Einige Exemplar sind Category,Briefe,Post,Zangen,Rechnungen,Einige Briefe sind Post.,w,Some critical
+Einige Category sind Exemplar,Tulpen,Pflanzen,Maschinen,gelb,Einige Pflanzen sind Tulpen.,w,Some true
+Einige Exemplar sind Sub-category,Telefone,Kommunikationsmittel,Äpfel,kabellos,Einige Telefone sind kabellos.,w,Some subordinate true
+Einige Exemplar sind Category,Tassen,Geschirr,Bananen,beschriftet,Einige Tassen sind Geschirr.,w,Some critical
+Einige Exemplar sind Sub-category,Leichtathletinnen,Sportlerinnen,Busse,gedopt,Einige Leichtathletinnen sind gedopt.,w,Some subordinate true
+Einige Exemplar sind Category,Handys,Telefone,Restaurants,Smartphones,Einige Handys sind Telefone.,w,Some critical
+Einige Category sind Exemplar,Tubas,Instrumente,Kleidungsstücke,verbeult,Einige Instrumente sind Tubas.,w,Some true
+Einige Exemplar sind Category,Fahrräder,Verkehrsmittel,Mützen,Tandems,Einige Fahrräder sind Verkehrsmittel.,w,Some critical
+Alle Exemplar sind Non-category,Hondas,Autos,Hunde,schnell,Alle Hondas sind Hunde.,f,All false
+Alle Exemplar sind Category,Katzen,Säugetiere,Brote,kastriert,Alle Katzen sind Säugetiere.,w,All true
+Einige Exemplar sind Category,Linsen,Hülsenfrüchte,Werkzeug,gelb,Einige Linsen sind Hülsenfrüchte.,w,Some critical
+Einige Exemplar sind Category,Pizzen,Lebensmittel,Nagetiere,tiefgekühlt,Einige Pizzen sind Lebensmittel.,w,Some critical
+Alle Exemplar sind Category,Osnabrücker,Leute,Zwiebeln,Studenten,Alle Osnabrücker sind Leute.,w,All true
+Einige Exemplar sind Category,Banknoten,Zahlungsmittel,Stühle,gefälscht,Einige Banknoten sind Zahlungsmittel.,w,Some critical
+Alle Exemplar sind Non-category,Kirschen,Früchte,Häuser,sauer,Alle Kirschen sind Häuser.,f,All false
+Alle Exemplar sind Non-category,Schafe,Säugetiere,Früchte,geklont,Alle Schafe sind Früchte.,f,All false
+Einige Category sind Exemplar,Möhren,Pflanzen,Fernseher,krumm,Einige Pflanzen sind Möhren.,w,Some true
+Einige Exemplar sind Category,Kugelschreiber,Stifte,Bücher,leer,Einige Kugelschreiber sind Stifte.,w,Some critical
+Alle Exemplar sind Category,Mietshäuser,Gebäude,Orangen,vierstöckig,Alle Mietshäuser sind Gebäude.,w,All true
+Einige Exemplar sind Sub-category,Erdnüsse,Nüsse,Gläser,gesalzen,Einige Erdnüsse sind gesalzen.,w,Some subordinate true
+Einige Category sind Exemplar,Kekse,Gebäckstücke,Säugetiere,verbrannt,Einige Gebäckstücke sind Kekse.,w,Some true
+Einige Exemplar sind Category,Wölfe,Raubtiere,Kissen,weiß,Einige Wölfe sind Raubtiere.,w,Some critical
+Einige Exemplar sind Sub-category,Hosen,Kleidungsstücke,Häuser,Jeans,Einige Hosen sind Jeans.,w,Some subordinate true
+Einige Exemplar sind Category,Anwälte,Leute,Bücher,Männer,Einige Anwälte sind Leute.,w,Some critical
+Alle Exemplar sind Category,Kartoffeln,Pflanzen,Schuhe,geschält,Alle Kartoffeln sind Pflanzen.,w,All true
+Alle Exemplar sind Non-category,Lehrerinnen,Leute,Bäume,Biologinnen,Alle Lehrerinnen sind Bäume.,f,All false
+Einige Exemplar sind Non-category,Halstücher,Kleidungsstücke,Affen,aus Seide,Einige Halstücher sind Affen.,f,Some false
+Einige Exemplar sind Non-category,Schuhe,Kleidungsstücke,Klaviere,Stiefel,Einige Schuhe sind Klaviere.,f,Some false
+Alle Exemplar sind Category,Audis,Autos,Verkehrsmittel,blau,Alle Audis sind Autos.,w,All true
+Einige Exemplar sind Non-category,Kleiderschränke,Möbel,Handschuhe,begehbar,Einige Kleiderschränke sind Handschuhe.,f,Some false
+Einige Category sind Exemplar,Jacken,Kleidungsstücke,Reptilien,wasserdicht,Einige Kleidungsstücke sind Jacken.,w,Some true
+Einige Exemplar sind Category,Dozenten,Leute,Autos,Psychologen,Einige Dozenten sind Leute.,w,Some critical
+Einige Category sind Exemplar,Limonaden,Getränke,Restaurants,zuckerfrei,Einige Getränke sind Limonaden.,w,Some true
+Alle Exemplar sind Non-category,Senioren,Leute,Uhren,gesund,Alle Senioren sind Uhren.,f,All false
+Einige Exemplar sind Sub-category,Häuser,Gebäude,Pflanzen,Wolkenkratzer,Einige Häuser sind Wolkenkratzer.,w,Some subordinate true
+Einige Exemplar sind Non-category,Flöten,Instrumente,Pflanzen,aus Holz,Einige Flöten sind Pflanzen.,f,Some false
+Alle Exemplar sind Non-category,Bistros,Restaurants,Leute,französisch,Alle Bistros sind Leute.,f,All false
+Einige Exemplar sind Category,Volvos,Autos,Insekten,rot,Einige Volvos sind Autos.,w,Some critical
+Einige Exemplar sind Category,Socken,Kleidungsstücke,Nüsse,löchrig,Einige Socken sind Kleidungsstücke.,w,Some critical
+Einige Exemplar sind Non-category,Fords,Autos,Bücher,grün,Einige Fords sind Bücher.,f,Some false
+Einige Exemplar sind Category,Handschuhe,Kleidungsstücke,Insekten,fingerlos,Einige Handschuhe sind Kleidungsstücke.,w,Some critical
+Alle Exemplar sind Category,Suppen,Lebensmittel,Hunde,vegetarisch,Alle Suppen sind Lebensmittel.,w,All true
+Einige Category sind Exemplar,Nudeln,Lebensmittel,Pullover,Spaghetti,Einige Lebensmittel sind Nudeln.,w,Some true
+Einige Exemplar sind Sub-category,Regenmäntel,Kleidungsstücke,Verkehrsmittel,aus Kunststoff,Einige Regenmäntel sind aus Kunststoff.,w,Some subordinate true
+Alle Exemplar sind Non-category,Brötchen,Gebäckstücke,Hosen,belegt,Alle Brötchen sind Hosen.,f,All false
+Einige Category sind Exemplar,Rinder,Säugetiere,Blumen,Kälber,Einige Säugetiere sind Rinder.,w,Some true
+Einige Exemplar sind Category,Buchhalter,Leute,Pflanzen,Golfer,Einige Buchhalter sind Leute.,w,Some critical
+Einige Exemplar sind Category,Löwen,Raubtiere,Kartoffeln,männlich,Einige Löwen sind Raubtiere.,w,Some critical
+Alle Exemplar sind Category,Bohnen,Pflanzen,Kleidungsstücke,gebacken,Alle Bohnen sind Pflanzen.,w,All true
+Alle Exemplar sind Category,Teller,Geschirr,Bäume,beschichtet,Alle Teller sind Geschirr.,w,All true
+Alle Exemplar sind Non-category,Schweine,Säugetiere,Pflanzen,rosa,Alle Schweine sind Pflanzen.,f,All false
+Einige Category sind Exemplar,Schokoladen,Süßigkeiten,Handschuhe,zartbitter,Einige Süßigkeiten sind Schokoladen.,w,Some true
+Alle Exemplar sind Category,Bienen,Insekten,Flaschen,Königinnen,Alle Bienen sind Insekten.,w,All true
+Einige Category sind Exemplar,Trompeten,Instrumente,Bäume,verbeult,Einige Instrumente sind Trompeten.,w,Some true
+Einige Exemplar sind Sub-category,Toyotas,Autos,Instrumente,schwarz,Einige Toyotas sind schwarz.,w,Some subordinate true
+Einige Exemplar sind Category,Hunde,Säugetiere,Schiffe,geimpft,Einige Hunde sind Säugetiere.,w,Some critical
+Einige Exemplar sind Sub-category,Brote,Gebäckstücke,Fische,aus Roggen,Einige Brote sind aus Roggen.,w,Some subordinate true
+Einige Exemplar sind Category,Hühner,Vögel,Tapeten,freilaufend,Einige Hühner sind Vögel.,w,Some critical
+Einige Exemplar sind Category,Ärztinnen,Leute,Computer,Spezialistinnen,Einige Ärztinnen sind Leute.,w,Some critical
+Alle Exemplar sind Non-category,Chihuahuas,Hunde,Bohnen,alt,Alle Chihuahuas sind Bohnen.,f,All false
+Einige Exemplar sind Sub-category,Löffel,Besteck,Zäune,aus Kunststoff,Einige Löffel sind aus Kunststoff.,w,Some subordinate true
+Einige Exemplar sind Non-category,Handballer,Sportler,Sofas,Amateure,Einige Handballer sind Sofas.,f,Some false
+Einige Exemplar sind Category,Paprikas,Pflanzen,Werkzeug,grün,Einige Paprikas sind Pflanzen.,w,Some critical
+Einige Exemplar sind Non-category,Sofas,Möbel,Torten,gelb,Einige Sofas sind Torten.,f,Some false
+Alle Exemplar sind Non-category,Pianisten,Musiker,Hemden,blind,Alle Pianisten sind Hemden.,f,All false
+Einige Exemplar sind Non-category,Orangensäfte,Getränke,Motorräder,frisch gepresst,Einige Orangensäfte sind Motorräder.,f,Some false
+Einige Exemplar sind Non-category,Teller,Geschirr,Teppiche,flach,Einige Teller sind Teppiche.,f,Some false
+Alle Exemplar sind Category,Nadelbäume,Pflanzen,Verkehrsmittel,Tannen,Alle Nadelbäume sind Pflanzen.,w,All true
+Einige Exemplar sind Category,Schüsseln,Geschirr,Pullover,aus Metall,Einige Schüsseln sind Geschirr.,w,Some critical
+Alle Exemplar sind Non-category,Bananen,Früchte,Tassen,reif,Alle Bananen sind Tassen.,f,All false
+Einige Exemplar sind Sub-category,Motorräder,Verkehrsmittel,Früchte,Suzukis,Einige Motorräder sind Suzukis.,w,Some subordinate true
+Einige Exemplar sind Category,Pullover,Kleidungsstücke,Bärte,gemustert,Einige Pullover sind Kleidungsstücke.,w,Some critical
+Einige Category sind Exemplar,Fußballer,Sportler,Dokumente,Weltmeister,Einige Sportler sind Fußballer.,w,Some true
+Einige Exemplar sind Non-category,Posaunen,Instrumente,Tassen,mittelalterlich,Einige Posaunen sind Tassen.,f,Some false
+Einige Category sind Exemplar,Bratschen,Instrumente,Insekten,antik,Einige Instrumente sind Bratschen.,w,Some true
+Einige Exemplar sind Sub-category,Mäuse,Nagetiere,Möhren,Albinos,Einige Mäuse sind Albinos.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Ohrringe,Schmuck,Instrumente,silbern,Einige Ohrringe sind silbern.,w,Some subordinate true
+Alle Exemplar sind Category,Supermärkte,Geschäfte,Schränke,Aldis,Alle Supermärkte sind Geschäfte.,w,All true
+Alle Exemplar sind Category,Pralinen,Süßigkeiten,Geigen,alkoholhaltig,Alle Pralinen sind Süßigkeiten.,w,All true
+Einige Exemplar sind Category,PCs,Computer,Tassen,Laptops,Einige PCs sind Computer.,w,Some critical
+Einige Exemplar sind Category,Studentinnen,Leute,Instrumente,niedersächsisch,Einige Studentinnen sind Leute.,w,Some critical
+Einige Exemplar sind Non-category,Traktoren,Verkehrsmittel,Affen,rot,Einige Traktoren sind Affen.,f,Some false
+Alle Exemplar sind Non-category,Armreifen,Schmuck,Autos,aus Gold,Alle Armreifen sind Autos.,f,All false
+Einige Category sind Exemplar,Textmarker,Stifte,Telefone,gelb,Einige Stifte sind Textmarker.,w,Some true
+Einige Category sind Exemplar,Busse,Verkehrsmittel,Pflanzen,klimatisiert,Einige Verkehrsmittel sind Busse.,w,Some true
+Einige Exemplar sind Sub-category,Bassistinnen,Musiker,Computer,langhaarig,Einige Bassistinnen sind langhaarig.,w,Some subordinate true
+Einige Exemplar sind Non-category,Straßenbahnen,Verkehrsmittel,Gewürze,defekt,Einige Straßenbahnen sind Gewürze.,f,Some false
+Alle Exemplar sind Category,Geigen,Instrumente,Nüsse,elektrisch,Alle Geigen sind Instrumente.,w,All true
+Alle Exemplar sind Non-category,Kreditkarten,Zahlungsmittel,Autos,Visa,Alle Kreditkarten sind Autos.,f,All false

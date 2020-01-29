@@ -1,15 +1,9 @@
 ---
-title: "Preregistration"
-author: "Mathias Stoeber & Timo Roettger"
-date: "1/22/2020"
+title: "Design info"
 output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-
-## Technical & design details
-Task: Mathias
 
