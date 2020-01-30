@@ -9,23 +9,42 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ## Participants
-We will test 32 native speakers of German. All participants will be students at the University of Osnabrueck and will receive course credit for participation.
+We will test 32 native speakers of German. All participants will be students at the University of Osnabrueck and will receive course credit for participation. Applicants will be required to have normal or corrected-to-normal vision, and will have to be native speakers of German. They will be asked to report basic information on their handedness.
 
 ## Sample size justification
 Based on a pilot data set of 12 subjects, we estimated the effect magnitude and relevant variance components. To be  conservative, we simulated fake data assuming the following values. The simulation was based on 50% of the effect magnitude observed in the pilot and on 200% of the estimated variance components (random intercept for both subject and sentence and resiudal variance) (see /). Even with these highly conservative values, a power analysis suggests that we achieve a power of 0.9 with 24 participants. Because we aim at further exploring other aspects of the data, we aim for 32 participants as our target sample size.
 
 ## Procedure
-Task: Mathias
-Notes: what was the concrete procedure in the lab (intro, test, debriefing);
-what was the concrete trial-by-trial sequence including temporal intervals like inter and intra stimulus intervals
+The experiment will be created and run in the experiment builder software `OpenSesame` (version 3.2.8b1) (Mathôt et al. 2011), using the `mousetrap-os` plugin (version 2.0.0) (Kieslich & Henninger 2017) in order to record the streaming x,y-coordinates of the participants' hand movements. The machines running the experiment will be configured with Intel Xeon CPUs (E3-1245 v% @ 3.5GHz * 8), 32GB RAM, and the Ubuntu 16.04 LTS operating system. Participants will be individually seated in a sound-insulated booth in front of a Dell UP2716D UltraSharp monitor displaying the experiment across a visible area of 59.8 cm * 33.6 cm, at a resolution of 2560 * 1440 pixels. They will use a Dell MS116p optical computer mouse (1000 dpi) to perform the experimental task. Mouse cursor acceleration will be switched off using the command `xset`, in order to ensure a linear mapping between hand movements and cursor displacement. Participants will be asked to sign [**TODO a standardized consent form**] before the experiment. There will be no spoken instructions issued to the participants other than an assurance that they may at any point during the experiment leave the booth to either ask any questions they may have, or to terminate their participation altogether.
+
+The main experimental display will consist of a start button (a green square measuring 64 * 64 pixels, located at the bottom center of the screen), and the two response boxes (250 * 250 px), which will be located flush in the top left and top right corners of the screen, respectively. These will be labelled "w" (German: "wahr", *true*) and "f" (German: "falsch", *false*). The left-right placement of these labels will be consistent within-participant, but will be counterbalanced across participants. 
+In each trial, the participants will trigger the stimulus presentation by clicking on the start button, upon which a sentence will be displayed center-screen on a word-by-word basis at a rate of 300 ms per word. Recording of the mouse trajectory will start with the appearance of the final word of a sentence. In order to further encourage mouse movements that take place during the processing of the stimulus, participants will receive a warning (three red exclamation marks displayed in the center of the screen) if they fail to initiate their movement within 500 ms of the appearance of the final word. As a part of the on-screen written instructions, participants will be asked to read the stimulus sentences and evaluate their truth. They will be told to indicate their judgment by moving the mouse cursor onto the appropriately labelled response box and clicking it, whereupon the response boxes will disappear from the screen. During the training phase, this will be followed by 500 ms of the on-screen feedback as stated above before the next trial begins. During the main phase, only the start button will be displayed on an otherwise empty screen for the 500 ms inter-trial interval.
 
 ## Materials
-Task: Mathias
-Notes: Generation of test sentences 
+All stimulus sentences will adhere to the basic structure "Quantifier X sind (German: *are*) Y", with the quantifier being either "alle" (German: *all*) or "einige" (German: *some*). Depending on the sentence type, X and Y will either represent a category or an exemplar, e.g. "Alle Schweine sind Zitronen" (German: *All pigs are lemons*). There will be six sentence types in total, as the following table shows:
+
+| Type                  	| Pattern                            	| Example                                               	|
+|-----------------------	|------------------------------------	|-------------------------------------------------------	|
+| Some critical         	| Some [exemplar] are [category]     	| Einige Tauben sind Vögel (Some pigeons are birds)     	|
+| All true              	| All [exemplar] are [category]      	| Alle Tauben sind Vögel (All pigeons are birds)        	|
+| All false             	| All [exemplar] are [non-category]  	| Alle Tauben sind Steine (All pigeons are stones)      	|
+| Some true             	| Some [category] are [exemplar]     	| Einige Vögel sind Tauben (Some birds are pigeons)     	|
+| Some false            	| Some [exemplar] are [non-category] 	| Einige Tauben sind Steine (Some pigeons are stones)   	|
+| Some subordinate true 	| Some [exemplar] are [sub-category] 	| Einige Tauben sind weiblich (Some pigeons are female) 	|
+
+The necessary stimulus quadruplets (exemplar, category, non-category, sub-category) will be created in part by translating the stimuli used by Tomlinson et al (2013), whenever the German translation does not introduce idiosyncratic problems for the study at hand, and in part by an endeavor to determine German quadruplets that
+
+- are generally comparable to the original in terms of the types and range of entities and objects they refer to
+- can reasonably be expected not to require expert knowledge on the participants' part in order for them to be able to swiftly issue truth value judgments with regards to these items
+
+Given the taxonomic content of the desired stimulus sentences, one particular criterion for potential stimuli will concern composite nouns occurring in German quadruplet candidates / translations. For instance, in the sentence "Alle Tagebücher sind Bücher" (*All diaries are books*), the [exemplar] would already expose the reader to the [category], with a potentially biasing influence.
 
 ## Design
-Task: Mathias
-Notes: What Conditions did we have and how were they distributed in the experiment. Randomized? pseudorandomized?
+Before the main test portion of the experiment, participants will be presented with a training phase consisting of 100 trials, with a pseudo-randomized sequence of sentence types. The first six trials in this sequence will each represent one of the six sentence types (manually selected), while the remaining ninety-four trials will be randomized. In this phase, each participant will see the same sequencing of items. All 100 quadruplets used will be unique and will not reoccur in the main experimental phase. The sentence type 'Some critical' will appear twenty-five times, while the the other sentence types will appear fifteen times each.
+
+Participants will be randomly assigned to one of two groups (called "pragmatic condition" and "logical condition", respectively). These groups will differ only in terms of the on-screen feedback that will be issued immediately after each trial of the training phase (either "korrekt" or "inkorrekt"). Depending on group membership, subjects will receive feedback reinforcing either [**TODO the pragmatic interpretation or the logical interpretation**]. No feedback will be issued during the main experimental phase.
+
+In the main test phase, participants will go through a total of 180 trials (six sentence types * thirty quadruplets), with a randomized sequence for each participant.
 
 ## Processing
 Task: Mathias
