@@ -1,5 +1,5 @@
 ---
-title: "Design info"
+title: "TITLE"
 output: pdf_document
 ---
 
