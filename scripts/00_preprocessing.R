@@ -129,7 +129,7 @@ print(res_check$relative_frequencies_desired)
 
 # Custom prototype matching -----------------------------------------------
 
-prototypes <- read_csv("prototypes.csv")
+prototypes <- read_csv("derived_data/prototypes.csv")
 prototypes <- mt_import_long(prototypes)
 prototypes <- prototypes$trajectories
 # mt_plot(prototypes, color = "mt_id")
@@ -158,7 +158,7 @@ bind_rows(unlist(k_hclust$kopt)) %>%
 # gap and jump are useless (again)
 # stab (2) and slope (3) yield different results
 
-# we proceed with 2 to 3 clusters
+# we proceed with 2 to 4 clusters
 
 # clusters "space normalized"
 mtdata <- mt_cluster(mtdata,
