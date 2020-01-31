@@ -284,7 +284,7 @@ define loop test
 	set repeat 1
 	set order random
 	set description "Repeatedly runs another item"
-	set cycles 150
+	set cycles 180
 	set continuous no
 	set break_if_on_first yes
 	set break_if never
@@ -738,6 +738,96 @@ define loop test
 	setcycle 149 stimulus "Einige Gewehre sind Autos."
 	setcycle 149 correct_response f
 	setcycle 149 sentence_type "Some false"
+	setcycle 150 stimulus "Einige Tauben sind weiblich."
+	setcycle 150 correct_response w
+	setcycle 150 sentence_type "Some subordinate true"
+	setcycle 151 stimulus "Einige Fähren sind seetüchtig."
+	setcycle 151 correct_response w
+	setcycle 151 sentence_type "Some subordinate true"
+	setcycle 152 stimulus "Einige Romane sind Klassiker."
+	setcycle 152 correct_response w
+	setcycle 152 sentence_type "Some subordinate true"
+	setcycle 153 stimulus "Einige Wolkenkratzer sind amerikanisch."
+	setcycle 153 correct_response w
+	setcycle 153 sentence_type "Some subordinate true"
+	setcycle 154 stimulus "Einige Ferraris sind Cabrios."
+	setcycle 154 correct_response w
+	setcycle 154 sentence_type "Some subordinate true"
+	setcycle 155 stimulus "Einige Tiger sind gesund."
+	setcycle 155 correct_response w
+	setcycle 155 sentence_type "Some subordinate true"
+	setcycle 156 stimulus "Einige Hemden sind weiß."
+	setcycle 156 correct_response w
+	setcycle 156 sentence_type "Some subordinate true"
+	setcycle 157 stimulus "Einige Labradore sind erwachsen."
+	setcycle 157 correct_response w
+	setcycle 157 sentence_type "Some subordinate true"
+	setcycle 158 stimulus "Einige Pudel sind rasiert."
+	setcycle 158 correct_response w
+	setcycle 158 sentence_type "Some subordinate true"
+	setcycle 159 stimulus "Einige Biere sind alkoholfrei."
+	setcycle 159 correct_response w
+	setcycle 159 sentence_type "Some subordinate true"
+	setcycle 160 stimulus "Einige Weine sind französisch."
+	setcycle 160 correct_response w
+	setcycle 160 sentence_type "Some subordinate true"
+	setcycle 161 stimulus "Einige Haie sind angriffslustig."
+	setcycle 161 correct_response w
+	setcycle 161 sentence_type "Some subordinate true"
+	setcycle 162 stimulus "Einige Kabeljaus sind geräuchert."
+	setcycle 162 correct_response w
+	setcycle 162 sentence_type "Some subordinate true"
+	setcycle 163 stimulus "Einige Rosen sind rot."
+	setcycle 163 correct_response w
+	setcycle 163 sentence_type "Some subordinate true"
+	setcycle 164 stimulus "Einige Erdbeeren sind reif."
+	setcycle 164 correct_response w
+	setcycle 164 sentence_type "Some subordinate true"
+	setcycle 165 stimulus "Einige Äpfel sind grün."
+	setcycle 165 correct_response w
+	setcycle 165 sentence_type "Some subordinate true"
+	setcycle 166 stimulus "Einige Betten sind aus Holz."
+	setcycle 166 correct_response w
+	setcycle 166 sentence_type "Some subordinate true"
+	setcycle 167 stimulus "Einige Spinnen sind Taranteln."
+	setcycle 167 correct_response w
+	setcycle 167 sentence_type "Some subordinate true"
+	setcycle 168 stimulus "Einige Elefanten sind Zoobewohner."
+	setcycle 168 correct_response w
+	setcycle 168 sentence_type "Some subordinate true"
+	setcycle 169 stimulus "Einige Schlangen sind Pythons."
+	setcycle 169 correct_response w
+	setcycle 169 sentence_type "Some subordinate true"
+	setcycle 170 stimulus "Einige Echsen sind Chamäleons."
+	setcycle 170 correct_response w
+	setcycle 170 sentence_type "Some subordinate true"
+	setcycle 171 stimulus "Einige Ratten sind schwarz."
+	setcycle 171 correct_response w
+	setcycle 171 sentence_type "Some subordinate true"
+	setcycle 172 stimulus "Einige Hummer sind gezüchtet."
+	setcycle 172 correct_response w
+	setcycle 172 sentence_type "Some subordinate true"
+	setcycle 173 stimulus "Einige Sandalen sind Flip-Flops."
+	setcycle 173 correct_response w
+	setcycle 173 sentence_type "Some subordinate true"
+	setcycle 174 stimulus "Einige Diamanten sind künstlich."
+	setcycle 174 correct_response w
+	setcycle 174 sentence_type "Some subordinate true"
+	setcycle 175 stimulus "Einige Schraubenzieher sind elektrisch."
+	setcycle 175 correct_response w
+	setcycle 175 sentence_type "Some subordinate true"
+	setcycle 176 stimulus "Einige Gymnasiasten sind Abiturienten."
+	setcycle 176 correct_response w
+	setcycle 176 sentence_type "Some subordinate true"
+	setcycle 177 stimulus "Einige Speisezwiebeln sind rot."
+	setcycle 177 correct_response w
+	setcycle 177 sentence_type "Some subordinate true"
+	setcycle 178 stimulus "Einige Flugzeuge sind Düsenjets."
+	setcycle 178 correct_response w
+	setcycle 178 sentence_type "Some subordinate true"
+	setcycle 179 stimulus "Einige Gewehre sind automatisch."
+	setcycle 179 correct_response w
+	setcycle 179 sentence_type "Some subordinate true"
 	run trials_test
 
 define mousetrap_response tracking1_test
@@ -756,6 +846,7 @@ define mousetrap_response tracking1_test
 	set max_initiation_time 500
 	set logging_resolution 10
 	set description "Tracks mouse movements"
+	set correct_button ""
 	set click_required no
 	set check_initiation_time no
 	set button4 ""
@@ -780,6 +871,7 @@ define mousetrap_response tracking1_training
 	set max_initiation_time 500
 	set logging_resolution 10
 	set description "Tracks mouse movements"
+	set correct_button ""
 	set click_required no
 	set check_initiation_time no
 	set button4 ""

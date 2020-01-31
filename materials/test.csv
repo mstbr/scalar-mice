@@ -149,3 +149,33 @@ Einige Exemplar sind Non-category,Gymnasiasten,Schüler,Klaviere,Abiturienten,Ei
 Einige Exemplar sind Non-category,Speisezwiebeln,Pflanzen,Steine,rot,Einige Speisezwiebeln sind Steine.,f,Some false
 Einige Exemplar sind Non-category,Flugzeuge,Verkehrsmittel,Taschen,Düsenjets,Einige Flugzeuge sind Taschen.,f,Some false
 Einige Exemplar sind Non-category,Gewehre,Waffen,Autos,automatisch,Einige Gewehre sind Autos.,f,Some false
+Einige Exemplar sind Sub-category,Tauben,Vögel,Steine,weiblich,Einige Tauben sind weiblich.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Fähren,Verkehrsmittel,Säugetiere,seetüchtig,Einige Fähren sind seetüchtig.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Romane,Bücher,Gebäude,Klassiker,Einige Romane sind Klassiker.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Wolkenkratzer,Gebäude,Nagetiere,amerikanisch,Einige Wolkenkratzer sind amerikanisch.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Ferraris,Autos,Kleidungsstücke,Cabrios,Einige Ferraris sind Cabrios.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Tiger,Katzen,Fische,gesund,Einige Tiger sind gesund.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Hemden,Kleidungsstücke,Steine,weiß,Einige Hemden sind weiß.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Labradore,Hunde,Getränke,erwachsen,Einige Labradore sind erwachsen.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Pudel,Hunde,Pflanzen,rasiert,Einige Pudel sind rasiert.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Biere,Getränke,Schlangen,alkoholfrei,Einige Biere sind alkoholfrei.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Weine,Getränke,Gebäude,französisch,Einige Weine sind französisch.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Haie,Fische,Getränke,angriffslustig,Einige Haie sind angriffslustig.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Kabeljaus,Fische,Verkehrsmittel,geräuchert,Einige Kabeljaus sind geräuchert.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Rosen,Blumen,Bücher,rot,Einige Rosen sind rot.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Erdbeeren,Früchte,Blumen,reif,Einige Erdbeeren sind reif.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Äpfel,Früchte,Verkehrsmittel,grün,Einige Äpfel sind grün.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Betten,Möbel,Hunde,aus Holz,Einige Betten sind aus Holz.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Spinnen,Insekten,Blumen,Taranteln,Einige Spinnen sind Taranteln.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Elefanten,Säugetiere,Autos,Zoobewohner,Einige Elefanten sind Zoobewohner.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Schlangen,Reptilien,Vögel,Pythons,Einige Schlangen sind Pythons.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Echsen,Reptilien,Schalentiere,Chamäleons,Einige Echsen sind Chamäleons.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Ratten,Nagetiere,Stifte,schwarz,Einige Ratten sind schwarz.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Hummer,Schalentiere,Autos,gezüchtet,Einige Hummer sind gezüchtet.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Sandalen,Schuhe,Stifte,Flip-Flops,Einige Sandalen sind Flip-Flops.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Diamanten,Edelsteine,Nagetiere,künstlich,Einige Diamanten sind künstlich.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Schraubenzieher,Werkzeuge,Bücher,elektrisch,Einige Schraubenzieher sind elektrisch.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Gymnasiasten,Schüler,Klaviere,Abiturienten,Einige Gymnasiasten sind Abiturienten.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Speisezwiebeln,Pflanzen,Steine,rot,Einige Speisezwiebeln sind rot.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Flugzeuge,Verkehrsmittel,Taschen,Düsenjets,Einige Flugzeuge sind Düsenjets.,w,Some subordinate true
+Einige Exemplar sind Sub-category,Gewehre,Waffen,Autos,automatisch,Einige Gewehre sind automatisch.,w,Some subordinate true
