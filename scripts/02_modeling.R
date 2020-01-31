@@ -156,7 +156,7 @@ for (i in 1:length(parameters)) {
 posteriors_output_cond = data.frame(mean, lci, uci, name, prob_post, prob_prior)
 colnames(posteriors_output_cond) <- c("AUC", "lci", "uci", "Condition", "posterior odds", "prior odds")
 posteriors_output_cond <- posteriors_output_cond %>%
-  mutate(BF = `posterior odds` / `prior odds`)
+  mutate(BF = `prior odds` / `posterior odds`)
 
 # aggregate AUC scores for each subject
 df_agg <- df_red %>%
@@ -265,10 +265,11 @@ for (i in 1:length(parameters)) {
 posteriors_cluster_logodds = data.frame(mean, lci, uci, name, prob_post, prob_prior)
 colnames(posteriors_cluster_logodds) <- c("Proportion", "lci", "uci", "Condition", "posterior odds", "prior odds")
 posteriors_cluster_logodds <- posteriors_cluster_logodds %>%
-  mutate(BF = `posterior odds` / `prior odds`)
+  mutate(BF = `prior odds` / `posterior odds`)
 
 # store posteriors
 write.csv(posteriors_output_cond, file = "derived_data/posteriors_output_cond.csv")
-write.csv(posteriors_output_cluster, file = "derived_data/posteriors_output_cluster.csv")
+write.csv(posteriors_cluster_probs, file = "derived_data/posteriors_cluster_probs.csv")
+write.csv(posteriors_cluster_logodds, file = "derived_data/posteriors_cluster_logodds.csv")
 
 
