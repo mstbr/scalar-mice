@@ -8,6 +8,10 @@
 
 # Initialise --------------------------------------------------------------
 
+if (!require(readbulk)) {install.packages('readbulk')}
+if (!require(mousetrap)) {install.packages('mousetrap')}
+if (!require(tidyverse)) {install.packages('tidyverse')}
+
 # Load packages
 library(readbulk)
 library(mousetrap)

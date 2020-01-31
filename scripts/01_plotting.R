@@ -6,19 +6,22 @@
 ###
 
 
-## Prepare
+##############
+## Prepare ###
+##############
 
 # load packages
 
 if (!require(data.table)) {install.packages('data.table')}
 if (!require(tidyverse)) {install.packages('tidyverse')}
 if (!require(readxl)) {install.packages('readxl')}
-if (!require(mousetrap)) {install.packages('ggpubr')}
+if (!require(ggpubr)) {install.packages('ggpubr')}
 
 library(data.table)
 library(tidyverse)
 library(readxl)
 library(ggpubr)
+
 
 # load data
 df <- read_csv("derived_data/derivedDF.csv")
