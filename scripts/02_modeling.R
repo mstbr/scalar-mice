@@ -129,7 +129,7 @@ parameters = c("delta",
                "Pragmatic")
 
 # create vectors to store in
-lci = uci = mean = name = prob_post = prob_prior = ropeBF <- c()
+lci = uci = mean = name = prob_post = prob_prior <- c()
 
 # specify prior as above
 prior = rnorm(100000, mean = 0, sd = 2)
