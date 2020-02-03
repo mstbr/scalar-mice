@@ -16,9 +16,30 @@ The original research question surrounded the linguistic phenomenon of scalar im
 
 The authors tested how these implicatures are processed and compared a two-step processing account to a one-step processing account. In the two-step account, listeners access a basic meaning and then enrich the basic meaning to form the scalar implicature. In a one-step account, listeners directly incorporated scalar implicature into the sentence representation in parallel. 
 
-To pit these two accounts against each other, they led American English listeners to read sentences and to use a computer mouse to indicate whether each sentence was true or false. In three experiments, the authors present data that suggest that, when verifying sentences like "some scientists preregister their studies", average mouse paths initially move towards the true target and then change direction mid-flight to select the false target. This effect is modulated by the feedback that listeners receive in a critical training phase. One group of listeners were trained to interpret the critical sentences as possibly referring to all elephants, another group was trained to interpret these sentences as referring only to a subset of elephants, but not all. 
+To pit these two accounts against each other, they led British English listeners to read sentences and to use a computer mouse to indicate whether each sentence was true or false. In three experiments, the authors present data that suggest that, when verifying sentences like "some scientists preregister their studies", average mouse paths initially move towards the true target and then change direction mid-flight to select the false target. This effect is modulated by the feedback that listeners receive in a critical training phase. One group of listeners were trained to interpret the critical sentences as possibly referring to all elephants, another group was trained to interpret these sentences as referring only to a subset of elephants, but not all. 
 
-The present study conceptually replicates Experiment 1 of the original study with German listeners. We are only looking at the critical condition and we are only measuring the curvature of the trajectories as operationalized by the area-under-the-curve measure (see below for details). Using clustering algorithms, we test whether these curvature effects are simple artifacts of averaging over two categorically discrete movement trajectories. 
+The present study conceptually replicates Experiment 1 of the original study with German listeners. We are only looking at the critical condition and we are only measuring the curvature of the trajectories as operationalized by the area-under-the-curve measure (see below for details). Using clustering algorithms, we test whether these curvature effects are simple artifacts of averaging over two categorically discrete movement trajectories.
+
+## Deviations from the original study
+- As stated above, our replication effort will disregard all experiments from the original study except for Experiment 1 [**ENTER REASON HERE**].
+
+- In the original study, "responses were considered outliers if mouse trajectories were three standard deviations outside of the mean AUC of all responses", and were discarded as such. The present replication [**will / will not**] adhere to this line of reasoning because [**ENTER REASON HERE**].
+
+- The present study will use German stimuli to elicit responses from native speakers of German, as opposed to the use of British English in the original.
+
+- Our experiment will be displayed on a larger screen than the original, with a differing aspect ratio (see the table below).
+
+|                    	| Original 	| Replication    	|
+|--------------------	|----------	|----------------	|
+| Display resolution 	| ?        	| 2560 * 1440 px 	|
+| Aspect ratio       	| 7:5      	| 16:9           	|
+| Width              	| 35 cm    	| 59.8 cm        	|
+| Height             	| 25 cm    	| 33.6cm         	|
+| Diagonal           	| 17 in    	| 27 in          	|
+
+- In Tomlinson et al. (2013), the location of the response boxes was slightly offset from the screen edges, whereas the current study will place them flush into the top corners of the display.
+
+- The present replication effort will present participants with a rather small, square start button (64 * 64 px on a 27" screen), whereas the original study implemented an oblong, 2 cm * 5 cm button.
 
 ## Participants
 We will test 32 native speakers of German. All participants will be students at the University of Osnabrück and will receive course credit for participation. Applicants will be required to have normal or corrected-to-normal vision, and will have to be native speakers of German. They will be asked to report basic information on their handedness.
@@ -91,5 +112,24 @@ To assess evidence for the null hypothesis H0 (the difference in AUC between log
 Additionally, we report the means and 95% credible intervals surrounding the means of the posterior distributions to quantify the model estimates and our uncertainty regarding these estimates. 
 
 ## References
+Fischer, M. H., & Hartmann, M. (2014). Pushing forward in embodied cognition: May we mouse the mathematical mind? Frontiers in Psychology, 5, 525. https://doi.org/10/gf4qzf
+
+Fujita, A., Takahashi, D. Y., Patriota, A. G., & Sato, J. R. (2014). A non-parametric statistical test to compare clusters with applications in functional magnetic resonance imaging data. Statistics in Medicine, 33(28), 4949–4962. https://doi.org/10/ggjx2h
+
+Haslbeck, J. M. B., & Wulff, D. U. (2016). Estimating the Number of Clusters via Normalized Cluster Instability. ArXiv:1608.07494 [Stat]. http://arxiv.org/abs/1608.07494
+
+Kass, R. E., & Raftery, A. E. (1995). Bayes Factors. Journal of the American Statistical Association, 90(430), 773–795. https://doi.org/10/gdnbw3
+
+Kieslich, P. J., & Henninger, F. (2016). Readbulk: An R package for reading and combining multiple data files. https://doi.org/10.5281/zenodo.596649
+
+Kieslich, P. J., & Henninger, F. (2017). Mousetrap: An integrated, open-source mouse-tracking package. Behavior Research Methods, 49(5), 1652–1667. https://doi.org/10/gb4dhw
+
+Kieslich, P. J., Henninger, F., Wulff, D. U., Haslbeck, J. M. B., & Schulte-Mecklenbeck, M. (2019). Mouse-tracking: A practical guide to implementation and analysis. In A handbook of process tracing methods (2nd edition). Routledge. https://osf.io/zuvqa
+
+R Core Team. (2018). R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing. https://www.R-project.org
+
+Tomlinson, J. M., Bailey, T. M., & Bott, L. (2013). Possibly all of that and then some: Scalar implicatures are understood in two steps. Journal of Memory and Language, 69(1), 18–35. https://doi.org/10/gf4qzp
+
+Wulff, D. U., Haslbeck, J. M. B., Kieslich, P. J., Henninger, F., & Schulte-Mecklenbeck, M. (2019). Mouse-tracking: Detecting Types in Movement Trajectories. In A handbook of process tracing methods (2nd edition). Routledge. https://osf.io/6edca
 
 
