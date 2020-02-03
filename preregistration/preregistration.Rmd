@@ -33,7 +33,7 @@ Participants will be asked to sign a standardized consent form before the experi
 
 The main experimental display will consist of a start button (a green square measuring 64 x 64 pixels, located at the bottom center of the screen), and the two response boxes (250 x 250 px), which will be located flush in the top left and top right corners of the screen, respectively. These will be labelled "w" (German: "wahr", 'true') and "f" (German: "falsch", 'false'). The left-right placement of these labels will be consistent within-participant, but will be counterbalanced across participants.
 
-![Figure 1: The main experimental screen](screen.png)
+![The main experimental screen](screen.png)
 
 In each trial, the participants will trigger the stimulus presentation by clicking on the start button, upon which a sentence will be orthographically displayed center-screen on a word-by-word basis at a rate of 300 ms per word. Recording of the mouse trajectory will start with the appearance of the final word of a sentence. In order to further encourage mouse movements that take place during the processing of the stimulus, participants will receive a warning (three red exclamation marks displayed in the center of the screen) if they fail to initiate their movement within 500 ms of the appearance of the final word. As a part of the on-screen written instructions, participants will be asked to read the stimulus sentences and evaluate their truth. They will be told to indicate their judgment by moving the mouse cursor onto the appropriately labelled response box and clicking it, whereupon the response boxes will disappear from the screen. During the training phase, this will be followed by 500 ms of the on-screen feedback as stated above, before the next trial begins. During the main phase, only the start button will be displayed on an otherwise empty screen for the 500 ms inter-trial interval.
 
@@ -122,6 +122,8 @@ Additionally, we report the means and 95% credible intervals surrounding the mea
 
 
 ## References
+Bürkner, P.-C. (2017). brms: An R package for Bayesian multilevel models using Stan. Journal of Statistical Software, 80(1), 1–28. https://doi.org/10/gddxwp
+
 Fischer, M. H., & Hartmann, M. (2014). Pushing forward in embodied cognition: May we mouse the mathematical mind? Frontiers in Psychology, 5, 525. https://doi.org/10/gf4qzf
 
 Fujita, A., Takahashi, D. Y., Patriota, A. G., & Sato, J. R. (2014). A non-parametric statistical test to compare clusters with applications in functional magnetic resonance imaging data. Statistics in Medicine, 33(28), 4949–4962. https://doi.org/10/ggjx2h
