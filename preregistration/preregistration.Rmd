@@ -1,5 +1,7 @@
 ---
-title: "Replication of Tomlinson et al. (2013)"
+title: "Preregistration: Replication of Tomlinson et al. (2013)"
+author: "Roettger, Timo B., Stoeber, Mathias, Franke, Michael"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: pdf_document
 ---
 
